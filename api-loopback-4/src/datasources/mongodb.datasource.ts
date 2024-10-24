@@ -1,13 +1,14 @@
 import {inject} from '@loopback/core';
 import {juggler} from '@loopback/repository';
-import * as config from './mongodb.datasource.json';
+import config from './mongodb.datasource.config'; // Adjust the path if necessary
+
 
 export class MongodbDataSource extends juggler.DataSource {
   static dataSourceName = 'mongodb';
 
   constructor(
     @inject('datasources.config.mongodb', {optional: true})
-    dsConfig: object = config,
+      dsConfig: object = config,
   ) {
     super(dsConfig);
   }

@@ -26,6 +26,7 @@ const PING_RESPONSE: ResponseObject = {
     },
   },
 };
+export default PING_RESPONSE;
 
 /**
  * A simple controller to bounce back http requests
